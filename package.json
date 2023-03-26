@@ -1,0 +1,32 @@
+{
+  "name": "festival",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.0.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "autoprefixer": "^9.8.8",
+    "core-js": "^3.25.3",
+    "firebase": "^8.10.1",
+    "gsap": "^3.11.4",
+    "nuxt": "^2.15.8",
+    "postcss": "^8.1.9",
+    "postcss-import": "12.0.1",
+    "split-text": "^1.0.0",
+    "split-text-js": "^1.0.3",
+    "splittext": "^2.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "webpack": "^4.0.0"
+  }
+}
