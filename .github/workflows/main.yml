@@ -28,5 +28,5 @@ jobs:
         server: ftp.strato.de
         username: sftp_admin@keyed.elias-englen.de
         password: ${{ secrets.password }}
-        local-dir: './client/dist/'
+        local-dir: './dist/'
         server-dir: 'farsight-festival/'
