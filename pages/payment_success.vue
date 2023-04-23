@@ -10,7 +10,7 @@
         <p>Wenn du Fragen hast, kannst du uns gerne kontaktieren.</p>
       </div>
       <div class="col-50">
-        <img src="ticket.svg" alt="ticket" class="ticket" />
+        <img src="/ticket.svg" alt="ticket" class="ticket" />
       </div>
     </div>
     <div class="content-container">

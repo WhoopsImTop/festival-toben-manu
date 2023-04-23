@@ -62,7 +62,7 @@
         </form>
       </div>
       <div class="col-50">
-        <img src="ticket.svg" alt="ticket" class="ticket" />
+        <img src="/ticket.svg" alt="ticket" class="ticket" />
       </div>
     </div>
     <span class="info-text"
