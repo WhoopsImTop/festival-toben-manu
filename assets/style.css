@@ -82,6 +82,7 @@ p {
   font-family: 'canada-type-gibson', sans-serif;
   color: var(--primary-light);
   font-size: 25px;
+  line-break: auto;
   line-height: 45px;
 }
 
@@ -186,8 +187,8 @@ form .col:last-child {
   border: none;
   background-color: var(--primary-accent);
   color: var(--primary-dark);
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 25px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 30px;
@@ -291,6 +292,7 @@ form .col:last-child {
   border: 3px solid var(--primary-light);
   overflow-x: hidden;
   padding: 10px 0;
+  background-color: #222222;
 }
 
 .text-divider-text {
@@ -332,6 +334,54 @@ form .col:last-child {
 .card img {
   max-width: 500px;
   width: 100%;
+}
+
+.vote-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.vote-container {
+  background-color: #111111;
+  padding: 20px 0;
+  font-size: 25px;
+  color: var(--primary-light);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 10px;
+  position: relative;
+  overflow: visible;
+}
+
+.icon-container {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.vote-icon {
+  background-color: #222222;
+  border: 1px solid #111111;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 18px;
+  position: absolute;
+}
+
+
+.vote-active {
+  background-color: var(--primary-accent);
+  color: var(--primary-dark);
 }
 
 @media (max-width: 900px) {
@@ -385,6 +435,16 @@ form .col:last-child {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     margin: 0 10px;
+  }
+  
+  .vote-container {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .vote-icon {
+    font-size: 8px;
+    padding: 5px;
   }
 
   .burger {
@@ -450,7 +510,7 @@ form .col:last-child {
     overflow-x: hidden;
     padding: 10px 0;
   }
-  
+
   .text-divider-text {
     text-align: center;
     color: var(--primary-light);
@@ -472,7 +532,7 @@ form .col:last-child {
     margin: 10px 0;
     width: 100%;
   }
-  
+
   form .row {
     display: flex;
     flex-direction: row;
@@ -483,11 +543,11 @@ form .col:last-child {
   form {
     margin-bottom: 120px;
   }
-  
+
   form .col {
     width: 100%;
   }
-  
+
   form .col:last-child {
     margin-left: 16px;
   }

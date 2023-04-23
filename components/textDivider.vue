@@ -24,5 +24,7 @@ export default {
 </script>
 
 <style>
-
+.text-divider-text {
+  white-space: nowrap;
+}
 </style>

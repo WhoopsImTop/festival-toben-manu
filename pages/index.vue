@@ -23,17 +23,18 @@
         <br />
         <span class="small-notice-banner">Text Sponsored by ChatGPT</span>
       </div>
+      <genres />
     </div>
     <text-divider text="Veranstalter" deg="-2" />
     <div class="content-container">
       <div class="text-container row">
         <div class="card">
-          <img src="/torben.png" alt="Torben" />
+          <img src="/torben.jpeg" alt="Torben" />
           <h3 style="font-weight: bold">Torben Stein</h3>
         </div>
         <div class="card">
-          <img src="/manu.png" alt="Torben" />
-          <h3 style="font-weight: bold">Manuel Österle</h3>
+          <img src="/manu.jpeg" alt="Torben" />
+          <h3 style="font-weight: bold">Manuel Oesterle</h3>
         </div>
       </div>
     </div>
@@ -61,7 +62,9 @@
 </template>
 
 <script>
+import genres from '../components/genres.vue';
 export default {
+  components: { genres },
   name: "IndexPage",
 };
 </script>
