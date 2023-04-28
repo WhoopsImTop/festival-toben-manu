@@ -3,10 +3,10 @@
     <div class="content-container navigation-content">
       <nuxt-link to="/"><logo class="logo" /></nuxt-link>
       <div class="link-container" :class="active ? 'active' : ''" @click="closeMenu()">
-        <nuxt-link class="link" to="tickets-kaufen" 
+        <nuxt-link class="link" to="-7tickets-kaufen" 
           >Tickets Kaufen</nuxt-link
         >
-        <nuxt-link class="link" to="sponsor-werden" >Sponsor werden</nuxt-link
+        <nuxt-link class="link" to="/sponsor-werden" >Sponsor werden</nuxt-link
         >
       </div>
       <div
