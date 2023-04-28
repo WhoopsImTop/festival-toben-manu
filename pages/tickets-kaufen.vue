@@ -58,7 +58,6 @@
           >
             {{ buttonText }}
           </button>
-          <p class="hint">Ticketverkauf startet bald</p>
         </form>
       </div>
       <div class="col-50">

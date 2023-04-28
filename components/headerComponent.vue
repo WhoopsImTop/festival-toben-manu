@@ -2,9 +2,12 @@
   <div class="navigation-container">
     <div class="content-container navigation-content">
       <nuxt-link to="/"><logo class="logo" /></nuxt-link>
-      <div class="link-container" :class="active ? 'active' : ''">
-        <nuxt-link class="link" to="tickets-kaufen">Tickets Kaufen</nuxt-link>
-        <nuxt-link class="link" to="sponsor-werden">Sponsor werden</nuxt-link>
+      <div class="link-container" :class="active ? 'active' : ''" @click="closeMenu()">
+        <nuxt-link class="link" to="tickets-kaufen" 
+          >Tickets Kaufen</nuxt-link
+        >
+        <nuxt-link class="link" to="sponsor-werden" >Sponsor werden</nuxt-link
+        >
       </div>
       <div
         class="burger"
@@ -27,6 +30,13 @@ export default {
     return {
       active: false,
     };
+  },
+  methods: {
+    closeMenu() {
+      document.querySelector(".burger").classList.remove("active");
+      document.querySelector(".link-container").classList.remove("active");
+      this.active = false;
+    },
   },
 };
 </script>

@@ -420,6 +420,10 @@ form .col:last-child {
     color: var(--primary-light);
   }
 
+  h4, h5 {
+    color: var(--primary-light) !important;
+  }
+
   p {
     font-family: 'canada-type-gibson', sans-serif;
     color: var(--primary-light);
