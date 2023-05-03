@@ -3,7 +3,7 @@
     <div class="row">
       <div class="text-container col-50">
         <h2 style="margin-bottom: 10px">Tickets Kaufen</h2>
-        <h3 class="highlighted" style="font-style: italic">20.00€</h3>
+        <h3 class="highlighted" style="font-style: italic">25.00€</h3>
         <form>
           <div class="row">
             <div class="col">
@@ -108,12 +108,12 @@ export default {
             {
               id: "01",
               name: "Festival Ticket",
-              price: "20.00",
+              price: "25.00",
               quantity: 1,
             },
           ],
           payment_method,
-          total: 20.00,
+          total: 25.00,
         })
         .then((res) => {
           window.location.href = res.data.url;
