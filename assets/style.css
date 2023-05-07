@@ -154,7 +154,7 @@ form .col:last-child {
   background-image: url('/grid_bg.png');
   background-size: cover;
   background-position: center;
-  height: 93vh;
+  min-height: 93vh;
   position: relative;
 }
 
@@ -226,7 +226,7 @@ form .col:last-child {
   align-items: flex-start;
   justify-content: flex-end;
   padding: 80px 0;
-  height: 93vh;
+  min-height: 93vh;
   color: var(--primary-light);
 }
 
