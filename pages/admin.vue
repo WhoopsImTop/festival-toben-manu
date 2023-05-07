@@ -24,7 +24,7 @@
             <td>{{ customer.name }} {{ customer.last_name }}</td>
             <td>{{ customer.email }}</td>
             <td>{{ customer.payment_method }}</td>
-            <td>{{ new Date(customer.created_at).toLocaleString("DE-de") }}</td>
+            <td>{{ new Date(customer.payment_date).toLocaleString("DE-de") }}</td>
             <td>{{ customer.order_id }}</td>
             <td>
               <button
