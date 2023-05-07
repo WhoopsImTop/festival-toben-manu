@@ -26,6 +26,7 @@
         <br />
         <span class="small-notice-banner">Text Sponsored by ChatGPT</span>
       </div>
+      <h2>Trailer</h2>
       <video class="small-video" loop controls style="margin-bottom: 100px;">
         <source src="/farsight.mp4" type="video/mp4" />
       </video>

@@ -104,7 +104,9 @@ p {
   color: var(--primary-accent);
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='email'],
+input[type='password'] {
   background-color: transparent;
   border: 2px solid var(--primary-accent);
   color: var(--primary-light);
@@ -241,7 +243,7 @@ form .col:last-child {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .notice-banner {
@@ -389,7 +391,6 @@ form .col:last-child {
   position: absolute;
 }
 
-
 .vote-active {
   background-color: var(--primary-accent);
   color: var(--primary-dark);
@@ -406,14 +407,6 @@ form .col:last-child {
   body,
   html {
     overflow-x: hidden;
-  }
-
-  .video-autoplay {
-    position: unset;
-    width: 100%;
-    object-fit: contain;
-    z-index: -1;
-    opacity: 1;
   }
 
   h1 {
@@ -446,7 +439,8 @@ form .col:last-child {
     color: var(--primary-light);
   }
 
-  h4, h5 {
+  h4,
+  h5 {
     color: var(--primary-light) !important;
   }
 
@@ -463,25 +457,6 @@ form .col:last-child {
     color: var(--primary-accent);
   }
 
-  
-.landing-container {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 !important;
-  height: auto;
-  color: var(--primary-light);
-}
-
-.landing-container .content-container {
-  width: 100%;
-  position: relative;
-  margin-top: 40px
-}
-
   .link {
     font-family: 'canada-type-gibson', sans-serif;
     font-weight: 800;
@@ -491,7 +466,7 @@ form .col:last-child {
     transition: all 0.2s ease-in-out;
     margin: 0 10px;
   }
-  
+
   .vote-container {
     padding: 10px;
     font-size: 16px;
@@ -577,7 +552,11 @@ form .col:last-child {
     z-index: 1;
   }
 
-  input[type='text'] {
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='password'] {
     background-color: transparent;
     border: 2px solid var(--primary-accent);
     color: var(--primary-light);
