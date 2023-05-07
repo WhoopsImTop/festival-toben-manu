@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="landing-container">
+      <video class="video-autoplay" autoplay muted loop>
+        <source src="/farsight.mp4" type="video/mp4" />
+      </video>
       <div class="content-container">
         <div class="notice-banner">
           <span>01.07.2023</span>
@@ -62,7 +65,7 @@
 </template>
 
 <script>
-import genres from '../components/genres.vue';
+import genres from "../components/genres.vue";
 export default {
   components: { genres },
   name: "IndexPage",
