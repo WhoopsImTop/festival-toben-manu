@@ -63,8 +63,15 @@ export default {
       const response = await axios.post(
         "https://mein-campusplan.de/user/login",
         {
-          email: this.email,
-          password: this.password,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
+          },
+          body: {
+            email: this.email,
+            password: this.password,
+          },
         }
       );
       if (response.data) {
@@ -87,7 +94,9 @@ export default {
           });
         })
         .catch(() => {
-            window.alert("Es gab einen Fehler, bitte versuchen Sie es später erneut.");
+          window.alert(
+            "Es gab einen Fehler, bitte versuchen Sie es später erneut."
+          );
         });
     },
   },
