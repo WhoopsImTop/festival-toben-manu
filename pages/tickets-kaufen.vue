@@ -29,7 +29,16 @@
             placeholder="E-Mail"
             v-model="email"
           />
-          <h4 style="color: #efefef; letter-spacing: 1px; margin-top: 10px; font-weight: 400">Zahlungsmethode</h4>
+          <h4
+            style="
+              color: #efefef;
+              letter-spacing: 1px;
+              margin-top: 10px;
+              font-weight: 400;
+            "
+          >
+            Zahlungsmethode
+          </h4>
           <div class="row">
             <div
               class="payment_method"
@@ -47,7 +56,9 @@
             </div>
           </div>
           <label v-if="paypal" style="display: flex; align-items: center"
-            >Bitte drücke am Ende des Kaufprozesses auf "Zurück zum Händler um abstimmen zu können!"</label>
+            >Bitte drücke am Ende des Kaufprozesses auf "Zurück zum Händler um
+            abstimmen zu können!"</label
+          >
           <label style="display: flex; align-items: center"
             ><input type="checkbox" v-model="datenschutz" />Ich bin mit der
             Verarbeitung meiner daten gemäss datenschutzerklärung
@@ -58,7 +69,8 @@
             :disabled="!datenschutz"
             @click="redirectToPaymentPage"
           >
-            {{ buttonText }}
+            <!-- {{ buttonText }} -->
+            Tickets ab 09.05.2023 verfügbar
           </button>
         </form>
       </div>
@@ -115,13 +127,26 @@ export default {
             },
           ],
           payment_method,
-          total: 25.00,
+          total: 25.0,
+        }, {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
         })
         .then((res) => {
-          window.location.href = res.data.url;
+          if (res.data.url) {
+            window.location.href = res.data.url;
+          } else {
+            window.alert(
+              "Es ist ein Fehler aufgetreten, bitte versuchen Sie es später erneut."
+            );
+            this.buttonText = "Ticket Kaufen";
+          }
         })
         .catch((err) => {
-          window.alert("Es ist ein Fehler aufgetreten, bitte versuchen Sie es später erneut.");
+          window.alert(
+            "Es ist ein Fehler aufgetreten, bitte versuchen Sie es später erneut."
+          );
           this.buttonText = "Ticket Kaufen";
         });
     },
