@@ -69,8 +69,7 @@
             :disabled="!datenschutz"
             @click="redirectToPaymentPage"
           >
-            <!-- {{ buttonText }} -->
-            Tickets ab 09.05.2023 verfügbar
+            {{ buttonText }}
           </button>
         </form>
       </div>
