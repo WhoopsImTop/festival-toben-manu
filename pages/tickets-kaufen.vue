@@ -128,10 +128,6 @@ export default {
           ],
           payment_method,
           total: 25.0,
-        }, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-          },
         })
         .then((res) => {
           if (res.data.url) {

@@ -72,15 +72,8 @@ export default {
     submitVotes() {
       axios
         .post("https://farsight-festival.de/api/vote", {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
-          },
-          body: {
-            customer_id: this.cid,
-            votes: this.userVotes,
-          },
+          customer_id: this.cid,
+          votes: this.userVotes,
         })
         .then(() => {
           this.$router.push("/dankeschoen");
@@ -99,15 +92,8 @@ export default {
 
     axios
       .post("https://farsight-festival.de/api/approve_payment", {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
-        },
-        body: {
-          customer_id: this.cid,
-          payment_id: this.payerId,
-        },
+        customer_id: this.cid,
+        payment_id: this.payerId,
       })
       .then((res) => {
         console.log(res);
