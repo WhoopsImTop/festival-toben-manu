@@ -63,15 +63,8 @@ export default {
       const response = await axios.post(
         "https://farsight-festival.de/api/user/login",
         {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
-          },
-          body: {
-            email: this.email,
-            password: this.password,
-          },
+          email: this.email,
+          password: this.password,
         }
       );
       if (response.data) {
