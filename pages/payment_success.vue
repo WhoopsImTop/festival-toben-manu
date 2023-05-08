@@ -71,7 +71,7 @@ export default {
     },
     submitVotes() {
       axios
-        .post("https://mein-campusplan.de/vote", {
+        .post("https://farsight-festival.de/api/vote", {
           headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
@@ -98,7 +98,7 @@ export default {
     this.payerId = this.$route.query.PayerID;
 
     axios
-      .post("https://mein-campusplan.de/approve_payment", {
+      .post("https://farsight-festival.de/api/approve_payment", {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
@@ -117,7 +117,7 @@ export default {
       });
   },
   mounted() {
-    fetch("https://mein-campusplan.de/votes")
+    fetch("https://farsight-festival.de/api/votes")
       .then((res) => res.json())
       .then((data) => {
         this.voteableData = data.votes;

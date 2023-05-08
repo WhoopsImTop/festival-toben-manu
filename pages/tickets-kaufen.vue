@@ -114,7 +114,7 @@ export default {
       }
       let payment_method = this.paypal ? "PayPal" : "Überweisung";
       axios
-        .post("https://mein-campusplan.de/checkout", {
+        .post("https://farsight-festival.de/api/checkout", {
           name: this.name,
           last_name: this.last_name,
           email: this.email,

@@ -61,7 +61,7 @@ export default {
   methods: {
     async login() {
       const response = await axios.post(
-        "https://mein-campusplan.de/user/login",
+        "https://farsight-festival.de/api/user/login",
         {
           headers: {
             "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export default {
     },
     async updatePayment(bezahlt, id) {
       await axios
-        .post("https://mein-campusplan.de/customer/payment", {
+        .post("https://farsight-festival.de/api/customer/payment", {
           status: bezahlt,
           customer_id: id,
         })

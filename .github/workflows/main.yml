@@ -29,4 +29,4 @@ jobs:
         username: sftp_admin@keyed.elias-englen.de
         password: ${{ secrets.password }}
         local-dir: './dist/'
-        server-dir: 'farsight-festival/'
+        server-dir: 'farsight-complete/'
