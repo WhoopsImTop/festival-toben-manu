@@ -55,10 +55,6 @@
               Überweisung
             </div>
           </div>
-          <label v-if="paypal" style="display: flex; align-items: center"
-            >Bitte drücke am Ende des Kaufprozesses auf "Zurück zum Händler um
-            abstimmen zu können!"</label
-          >
           <label style="display: flex; align-items: center"
             ><input type="checkbox" v-model="datenschutz" />Ich bin mit der
             Verarbeitung meiner daten gemäss datenschutzerklärung
