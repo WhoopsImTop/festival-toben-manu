@@ -113,6 +113,11 @@ export default {
         return;
       }
       let payment_method = this.paypal ? "PayPal" : "Überweisung";
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      };
       axios
         .post("https://mein-campusplan.de/checkout", {
           name: this.name,
@@ -128,11 +133,7 @@ export default {
           ],
           payment_method,
           total: 25.0,
-        }, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-          },
-        })
+        }, config)
         .then((res) => {
           if (res.data.url) {
             window.location.href = res.data.url;
