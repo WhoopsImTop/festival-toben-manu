@@ -24,7 +24,9 @@
             <td>{{ customer.name }} {{ customer.last_name }}</td>
             <td>{{ customer.email }}</td>
             <td>{{ customer.payment_method }}</td>
-            <td>{{ new Date(customer.payment_date).toLocaleString("DE-de") }}</td>
+            <td>
+              {{ new Date(customer.payment_date).toLocaleString("DE-de") }}
+            </td>
             <td>{{ customer.order_id }}</td>
             <td>
               <button
@@ -67,9 +69,14 @@ export default {
           password: this.password,
         }
       );
-      if (response.data) {
+      if (response.data.customers) {
         this.loggedIn = true;
         this.customers = response.data.customers;
+        setInterval(() => {
+          this.updateCustomers();
+        }, 10000);
+      } else {
+        window.alert("Falsche Email oder Passwort");
       }
     },
     async updatePayment(bezahlt, id) {
@@ -91,6 +98,19 @@ export default {
             "Es gab einen Fehler, bitte versuchen Sie es später erneut."
           );
         });
+    },
+    async updateCustomers() {
+      const response = await axios.post(
+        "https://farsight-festival.de/api/user/login",
+        {
+          email: this.email,
+          password: this.password,
+        }
+      );
+      if (response.data.customers) {
+        this.loggedIn = true;
+        this.customers = response.data.customers;
+      }
     },
   },
 };

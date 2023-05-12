@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="content-container">
+    <div class="content-container" style="margin-bottom: 50px;">
       <button class="button" @click="submitVotes">Abstimmen</button>
     </div>
   </div>
