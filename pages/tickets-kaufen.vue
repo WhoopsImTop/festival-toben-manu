@@ -55,10 +55,6 @@
               Überweisung
             </div>
           </div>
-          <label v-if="paypal" style="display: flex; align-items: center"
-            >Bitte drücke am Ende des Kaufprozesses auf "Zurück zum Händler um
-            abstimmen zu können!"</label
-          >
           <label style="display: flex; align-items: center"
             ><input type="checkbox" v-model="datenschutz" />Ich bin mit der
             Verarbeitung meiner daten gemäss datenschutzerklärung
@@ -69,8 +65,7 @@
             :disabled="!datenschutz"
             @click="redirectToPaymentPage"
           >
-            <!-- {{ buttonText }} -->
-            Tickets ab 09.05.2023 verfügbar
+            {{ buttonText }}
           </button>
         </form>
       </div>
@@ -119,7 +114,7 @@ export default {
         },
       };
       axios
-        .post("https://mein-campusplan.de/checkout", {
+        .post("https://farsight-festival.de/api/checkout", {
           name: this.name,
           last_name: this.last_name,
           email: this.email,
@@ -133,7 +128,7 @@ export default {
           ],
           payment_method,
           total: 25.0,
-        }, config)
+        })
         .then((res) => {
           if (res.data.url) {
             window.location.href = res.data.url;

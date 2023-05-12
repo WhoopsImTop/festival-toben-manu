@@ -3,6 +3,7 @@
     <div class="content-container row">
       <div class="text-container col-50">
         <h2>Zahlungs&shy;informationen</h2>
+        <p>Die Zahlungsinformationen wurden dir auch per Email gesendet.</p>
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
           <tbody>
             <tr style="border-collapse: collapse">
@@ -103,16 +104,9 @@ export default {
     },
     submitVotes() {
       axios
-        .post("https://mein-campusplan.de/vote", {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
-          },
-          body: {
-            customer_id: this.cid,
-            votes: this.userVotes,
-          },
+        .post("https://farsight-festival.de/api/vote", {
+          customer_id: this.cid,
+          votes: this.userVotes,
         })
         .then(() => {
           this.$router.push("/dankeschoen");
@@ -130,16 +124,9 @@ export default {
     this.payment_method = this.$route.query.payment_method;
 
     axios
-      .post("https://mein-campusplan.de/approve_payment", {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
-        },
-        body: {
-          customer_id: this.cid,
-          payment_id: this.payerId || " ",
-        },
+      .post("https://farsight-festival.de/api/approve_payment", {
+        customer_id: this.cid,
+        payment_id: this.payerId,
       })
       .then((res) => {
         console.log(res);
@@ -149,7 +136,7 @@ export default {
       });
   },
   mounted() {
-    fetch("https://mein-campusplan.de/votes")
+    fetch("https://farsight-festival.de/api/votes")
       .then((res) => res.json())
       .then((data) => {
         this.voteableData = data.votes;

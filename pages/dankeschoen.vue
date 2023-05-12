@@ -2,6 +2,7 @@
   <div class="content-container row">
     <div class="text-container col-50">
       <h2>Danke das du abgestimmt hast!</h2>
+      <p>Falls du noch nicht bezahlt hast, hast du eine E-Mail bekommen mit den Zahlungsinformationen.</p>
       <p>
         Du hast dich erfolgreich für das Farsight Festival angemeldet.<br />
         Wir freuen uns auf dich und hoffen, dass du ein tolles Erlebnis hast.
